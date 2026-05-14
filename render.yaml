@@ -5,32 +5,4 @@ services:
     dockerfilePath: ./backend/gateway/Dockerfile
     envVars:
       - key: PORT
-        value: 8080
-      - key: SUPABASE_URL
-        sync: false
-      - key: SUPABASE_ANON_KEY
-        sync: false
-
-  - type: web
-    name: tiktok-viewer-peer
-    env: docker
-    dockerfilePath: ./backend/services/peer-service/Dockerfile
-    envVars:
-      - key: PORT
-        value: 8081
-
-  - type: web
-    name: tiktok-viewer-trending
-    env: docker
-    dockerfilePath: ./backend/services/trending-service/Dockerfile
-    envVars:
-      - key: PORT
-        value: 8082
-
-  - type: web
-    name: tiktok-viewer-telemetry
-    env: docker
-    dockerfilePath: ./backend/services/telemetry-service/Dockerfile
-    envVars:
-      - key: PORT
-        value: 8084
+        value: "8080"
